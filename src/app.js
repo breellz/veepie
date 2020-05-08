@@ -24,31 +24,30 @@ const Jsx = (
 
 const myid = 123
   
-const post = {
-    id: myid,
+const post1 = {
+    id: uuid(),
     title: 'my first blog post',
     body:'whtever'
+}
+
+const post2 = {
+  id: uuid(),
+  title: 'my second blog post',
+  body:'whtever'
 }
 
 store.subscribe(()=>{
     console.log(store.getState())
 })
 
-store.dispatch(addPost(post))
+store.dispatch(addPost(post1))
+store.dispatch(addPost(post2))
 
-const update = {title: 'lala'}
 
-store.dispatch(editPost(myid, update))
 
-store.dispatch(deletePost(myid))
 
-const newpost = {
-    id: uuid(),
-    title: 'blah',
-    body: 'badassssss'
-}
 
-store.dispatch(setPosts([newpost]))
+
 
 ReactDOM.render(Jsx, document.getElementById('app'));
 

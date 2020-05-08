@@ -1,9 +1,14 @@
 import React from 'react';
+import PostList from './PostList'
+import PostlistFilters from './PostlistFilter';
 
-const DashboardPage = () => (
+
+const DashboardPage = (props) => (
   <div>
-    Dashboard page content
+    <PostlistFilters />
+    <PostList />
   </div>
 );
 
-export default DashboardPage;
+export default DashboardPage
+
