@@ -20,7 +20,7 @@ const AppRouter =()=>(
         <Route path ="/create"  component = {AddPost} />
         <Route path ="/edit/:id"  component ={EditPost} />
         <Route path ="/profile"  component ={Profile} />
-        <Route path ="/read/" component ={Read} />
+        <Route path ="/read/:id" component ={Read} />
         <Route component ={NotFoundPage} />
         </Switch>
     </div>

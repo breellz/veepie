@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import AppRouter  from './routers/AppRouter';
  import configureStore from './store/configureStore';
  import {addPost, deletePost, editPost, setPosts} from './actions/posts'
- import uuid from 'uuid'
+ import uuid from 'uuid';
 // import { login, logout } from './actions/auth';
 // import 'normalize.css/normalize.css';
  import './styles/styles.scss';

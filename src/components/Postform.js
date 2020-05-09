@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import moment from 'moment';
+import uuid from 'uuid'
 
 const Postform =(props) => {
     const [title, setTitle] = useState(props.post? props.post.title :'')
     const [body, setBody] = useState(props.post ? props.post.body :'')
     const [tags, setTags] = useState(props.post? props.post.tags :'')
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
+    
 
     const handleTitle = (e) => {
         const titleText = e. target.value;
@@ -23,11 +26,15 @@ const Postform =(props) => {
         
     const handleSubmit = (e) => {
         e.preventDefault()
+        const createdAt= moment().format('dddd, MMMM Do YYYY, h:mm a')
+        
         if(!title || !body || !tags){
             setError('All fields are required')
         }else {
         setError('')
         props.onSubmit({
+            id: uuid(),
+            createdAt,
             title,
             body,
             tags
