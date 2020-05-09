@@ -27,13 +27,15 @@ const myid = 123
 const post1 = {
     id: uuid(),
     title: 'my first blog post',
-    body:'whtever'
+    body:'whtever',
+    tags: ['help', 'mine','sue']
 }
 
 const post2 = {
   id: uuid(),
   title: 'my second blog post',
-  body:'whtever'
+  body:'whtever',
+  tags:['programming', 'js', 'html']
 }
 
 store.subscribe(()=>{

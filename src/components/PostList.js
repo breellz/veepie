@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PostsSelector from '../selectors/PostsSelector'
+import PostlistItem from './PostlistItem'
+
 
 const PostList = (props) => (
-  <div>
-    {props.posts.map((post)=> <p key={post.id}>{post.title}</p>)}
-  </div>
+  props.posts.map((post)=> <PostlistItem key={post.id} {...post} />)
 );
 
 

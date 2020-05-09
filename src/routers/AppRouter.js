@@ -18,7 +18,7 @@ const AppRouter =()=>(
         <Route path = "/" component = {DashboardPage} exact = {true}/>
         <Route path ="/login"  component ={LoginPage} />
         <Route path ="/create"  component = {AddPost} />
-        <Route path ="/edit/"  component ={EditPost} />
+        <Route path ="/edit/:id"  component ={EditPost} />
         <Route path ="/profile"  component ={Profile} />
         <Route path ="/read/" component ={Read} />
         <Route component ={NotFoundPage} />

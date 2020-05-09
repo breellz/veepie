@@ -1,10 +1,26 @@
 import React from 'react';
+import{ connect } from 'react-redux'
+import Postform from './Postform'
+import {addPost} from '../actions/posts'
 
 
-const AddPost = () => (
+
+
+const AddPost = (props) => {
+  const onSubmit = ({...rest, tags}) => {
+    const editedTags = tags.split(' ')
+    const post= {...rest, tags: editedTags}
+    props.addPost(post);
+    props.history.push('/')
+  }
+ return(
   <div>
-    addpost page content
-  </div>
-);
+    <Postform  onSubmit = {onSubmit}/>
+    </div>
+ )
+}
 
-export default AddPost;
+const mapDispatchToProps = (dispatch) => ({
+  addPost : (post)=>(dispatch(addPost(post)))
+})
+export default connect(undefined, mapDispatchToProps)(AddPost);

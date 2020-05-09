@@ -1,6 +1,8 @@
 import React from 'react';
 import PostList from './PostList'
-import PostlistFilters from './PostlistFilter';
+import PostlistFilters from './PostlistFilter'; 
+
+
 
 
 const DashboardPage = (props) => (

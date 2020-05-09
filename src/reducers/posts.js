@@ -20,7 +20,7 @@ export default (state = postsReducerDefaultState, action) => {
               ...post,
               ...action.updates
             }
-          }return state
+          }return post
         })
 
         case 'SET_POSTS':
