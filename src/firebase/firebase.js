@@ -21,23 +21,23 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export {firebase , googleAuthProvider, database as default}
 
-  database.ref().set({
-      name: 'Bassit Owolabi',
-      age: 23,
-      stressLevel:6,
-      job: {
-          title: 'software developer',
-          company: 'Google'
-      },
-      location: {
-          city: 'Ibadan',
-          country:'Nigeria'
-      },
-  }).then(()=>{
-      console.log('Data was saved')
-  }).catch((error)=>{
-      console.log(error)
-  })
+  // database.ref().set({
+  //     name: 'Bassit Owolabi',
+  //     age: 23,
+  //     stressLevel:6,
+  //     job: {
+  //         title: 'software developer',
+  //         company: 'Google'
+  //     },
+  //     location: {
+  //         city: 'Ibadan',
+  //         country:'Nigeria'
+  //     },
+  // }).then(()=>{
+  //     console.log('Data was saved')
+  // }).catch((error)=>{
+  //     console.log(error)
+  // })
 
 // //   database.ref('attributes').set({hobby:'collecting Tiger\'s left balls '})
 // //   database.ref('attributes/height').set('1.67m')

@@ -11,7 +11,6 @@ import AppRouter  from './routers/AppRouter';
 // import 'react-dates/lib/css/_datepicker.css';
 // import { firebase } from './firebase/firebase';
 // import LoadingPage from './components/LoadingPage';
-import './firebase/firebase'
 
 
 
