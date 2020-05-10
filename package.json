@@ -12,6 +12,10 @@
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
   },
+  "engines": {
+    "npm": "6.13.4",
+    "node": "12.14.1"
+  },
   "author": "Bassit Owolabi",
   "license": "MIT",
   "dependencies": {
