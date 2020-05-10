@@ -2,8 +2,8 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import LoginPage from '../components/LoginPage'
 import AddPost from '../components/AddPost'
-import DashboardPage from '../components/DashBoardPage'
-import EditPost from '../components/Editpost'
+import DashboardPage from '../components/DashboardPage'
+import EditPost from '../components/EditPost'
 import Profile from '../components/Profile'
 import Read from '../components/Read'
 import NotFoundPage from '../components/NotFoundPage'
