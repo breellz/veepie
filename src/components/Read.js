@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Comments from './Comments'
 
 
 const Read = (props) => (
   <div>
     <h1>{props.post.title}</h1>
     <p>By:     . on {props.post.createdAt}</p><br /> 
-    <p>{props.post.body}</p>
+    <p>{props.post.body}</p><br/><br />
+    <Comments />
   </div>
 );
 

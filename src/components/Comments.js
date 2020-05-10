@@ -2,7 +2,10 @@ import React from 'react';
 
 const Comments = () => (
   <div>
-    Comments page content
+    <form>
+    <textarea placeholder="your comment goes here" />
+    <button>Post Comment</button>
+    </form>
   </div>
 );
 

@@ -5,7 +5,6 @@ import {editPost, deletePost} from '../actions/posts'
 
 
 const EditPost = (props) => {
-  console.log(props)
  const onRemove=()=>{
    props.deletePost(props.post.id)
    props.history.push('/')
