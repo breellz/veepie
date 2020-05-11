@@ -1,8 +1,8 @@
 import React from 'react';
 import{ connect } from 'react-redux'
-import Postform from './Postform'
+//import Postform from './Postform'
 import {addPost} from '../actions/posts'
-
+import RichEditor from '../components/RichEditor'
 
 
 
@@ -11,11 +11,12 @@ const AddPost = (props) => {
     const editedTags = tags.split(' ')
     const post= {...rest, tags: editedTags}
     props.addPost(post);
+    console.log(post)
     props.history.push('/')
   }
  return(
   <div>
-    <Postform  onSubmit = {onSubmit}/>
+    <RichEditor  onSubmit = {onSubmit}/>
     </div>
  )
 }

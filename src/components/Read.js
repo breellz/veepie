@@ -3,14 +3,18 @@ import { connect } from 'react-redux';
 import Comments from './Comments'
 
 
-const Read = (props) => (
+const Read = (props) => {
+  const body = props.post.body
+  return(
   <div>
     <h1>{props.post.title}</h1>
     <p>By:     . on {props.post.createdAt}</p><br /> 
-    <p>{props.post.body}</p><br/><br />
+    <div dangerouslySetInnerHTML={{__html:body}}></div>
+    <br/><br />
     <Comments />
   </div>
-);
+  )
+};
 
 
 const mapStateToProps = (state, props) => ({

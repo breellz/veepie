@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import PostForm from './Postform';
+//import PostForm from './Postform';
 import {editPost, deletePost} from '../actions/posts'
+import RichEditor from './RichEditor'
 
 
 const EditPost = (props) => {
@@ -16,7 +17,7 @@ const EditPost = (props) => {
 }
   return(
   <div>
-    <PostForm post = {props.post}
+    <RichEditor post = {props.post}
     onSubmit ={(post)=>onSubmit(post)}/>
     <button onClick={onRemove}>Delete Post</button>
   </div>
