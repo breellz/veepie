@@ -15,8 +15,8 @@ const AppRouter =()=>(
     <div>
         <Nav />
         <Switch>
-        <Route path = "/" component = {DashboardPage} exact = {true}/>
-        <Route path ="/login"  component ={LoginPage} />
+        <Route path = "/" component = {LoginPage} exact = {true}/>
+        <Route path ="/dashboard"  component ={DashboardPage} />
         <Route path ="/create"  component = {AddPost} />
         <Route path ="/edit/:id"  component ={EditPost} />
         <Route path ="/profile"  component ={Profile} />

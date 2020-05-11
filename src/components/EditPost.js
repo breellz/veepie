@@ -1,18 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux'
 //import PostForm from './Postform';
-import {editPost, deletePost} from '../actions/posts'
+import {startEditPost, startDeletePost} from '../actions/posts'
 import RichEditor from './RichEditor'
 
 
 const EditPost = (props) => {
  const onRemove=()=>{
-   props.deletePost(props.post.id)
+   props.startDeletePost(props.post.id)
    props.history.push('/')
  }
- const onSubmit = (post)=> {
-   console.log(post)
-   props.editpost(props.post.id, post)
+ const onSubmit = ({tags, ...rest})=> {
+  const editedTags = tags.split(',')
+  const updates = {...rest, tags: editedTags}
+   props.startEditpost(props.post.id, updates)
   props.history.push('/')
 }
   return(
@@ -29,8 +30,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  editpost: (id, post) => dispatch(editPost(id, post)),
-  deletePost: (id) => dispatch(deletePost(id))
+  startEditpost: (id, updates) => dispatch(startEditPost(id, updates)),
+  startDeletePost: (id) => dispatch(startDeletePost(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditPost);

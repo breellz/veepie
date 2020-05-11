@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
 
-
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -18,8 +17,9 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database()
 
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+const twitterAuthProvider = new firebase.auth.TwitterAuthProvider()
 
-export {firebase , googleAuthProvider, database as default}
+export {firebase , googleAuthProvider, twitterAuthProvider, database as default}
 
   // database.ref().set({
   //     name: 'Bassit Owolabi',

@@ -14,7 +14,7 @@ class RichEditor extends React.Component {
 
 		this.state = {
 		editorState: this.props.post? EditorState.createWithContent(stateFromHTML(this.props.post.body)) : EditorState.createEmpty(),
-		tags:  this.props.post? this.props.post.tags : '',
+		tags:  this.props.post? this.props.post.tags.toString() : '',
 		title: this.props.post ? this.props.post.title : ''
 	};
 		 
@@ -58,7 +58,6 @@ class RichEditor extends React.Component {
 			const title = this.state.title
 			const comments = []
 			this.props.onSubmit({
-				id: uuid(),
 				title,
 				createdAt,
 				body,
@@ -115,7 +114,7 @@ class RichEditor extends React.Component {
 			</div>
 			<input 
             type="text" 
-            placeholder="space separated tags..."
+            placeholder="comma separated tags..."
             value={this.state.tags} 
             onChange={this.handleTags}
             />

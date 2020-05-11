@@ -1,16 +1,16 @@
 import React from 'react';
 import{ connect } from 'react-redux'
 //import Postform from './Postform'
-import {addPost} from '../actions/posts'
+import { startAddPost } from '../actions/posts'
 import RichEditor from '../components/RichEditor'
 
 
 
 const AddPost = (props) => {
   const onSubmit = ({...rest, tags}) => {
-    const editedTags = tags.split(' ')
+    const editedTags = tags.split(',')
     const post= {...rest, tags: editedTags}
-    props.addPost(post);
+    props.startAddPost(post);
     console.log(post)
     props.history.push('/')
   }
@@ -22,6 +22,6 @@ const AddPost = (props) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addPost : (post)=>(dispatch(addPost(post)))
+  startAddPost : (post)=>(dispatch(startAddPost(post)))
 })
 export default connect(undefined, mapDispatchToProps)(AddPost);
