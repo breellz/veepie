@@ -5,9 +5,13 @@ import PostlistItem from './PostlistItem'
 
 
 const PostList = (props) => (
-  props.posts.map((post)=> <PostlistItem key={post.id} {...post} />)
-);
-
+  <div>
+  {
+    props.posts.length === 0 ? (<p>No posts to show</p>) :
+    (props.posts.map((post)=> <PostlistItem key={post.id} {...post} />))
+   }
+</div>
+)
 
 const mapStateToProps = (state) =>{
  return{

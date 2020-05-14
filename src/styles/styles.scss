@@ -1,5 +1,12 @@
-@import './components//RichEditor';
-
-.is-active {
-    font-weight: bold
-}
+@import './base/settings';
+@import './components/RichEditor';
+@import './base/base';
+@import './components/login';
+@import './components/post-form';
+@import './components/content-container';
+@import './components/nav';
+@import './components/add-post';
+@import './components/profile';
+@import './components/loader';
+@import './components/list';
+@import './components/read'

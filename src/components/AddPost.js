@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import{ connect } from 'react-redux'
+import {firebase} from '../firebase/firebase'
 //import Postform from './Postform'
 import { startAddPost } from '../actions/posts'
 import RichEditor from '../components/RichEditor'
@@ -7,15 +8,24 @@ import RichEditor from '../components/RichEditor'
 
 
 const AddPost = (props) => {
+  const [name, setName] = useState('Anonymous');
+  useEffect(()=>{
+    firebase.auth().onAuthStateChanged((user)=>{
+      if (user) {
+        setName(user.displayName)
+        }
+     })
+   },[]) 
+
   const onSubmit = ({...rest, tags}) => {
     const editedTags = tags.split(',')
-    const post= {...rest, tags: editedTags}
+    const post= {...rest, tags: editedTags, author: name}
     props.startAddPost(post);
-    console.log(post)
-    props.history.push('/')
+    props.history.push('/dashboard')
   }
  return(
-  <div>
+  <div className="content-container add-post">
+  
     <RichEditor  onSubmit = {onSubmit}/>
     </div>
  )

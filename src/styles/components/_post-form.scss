@@ -1,0 +1,34 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:7rem;
+}
+.post-form__input {
+    height: 5rem;
+    width:90%;
+    margin:$m-size;
+    padding:$s-size;
+    border:1px $dark-blue solid;
+    border-radius: $s-size;
+
+}
+
+.post-form__button {
+    padding:$s-size;
+    border-radius: $s-size;
+    width: 80%;
+    background-color: $dark-blue;
+    color:white;
+    font-size:600;
+}
+.edit-post-button{
+    margin-top:1rem;
+    margin-left:7.5rem;
+    margin-bottom: 1rem;
+}
+
+.postlist-search {
+    margin-left: 6rem;
+}

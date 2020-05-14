@@ -26,13 +26,16 @@ const Profile = ({startLogout}) => {
  },[]) 
 
  return(
-  <div>
+  <div className=" profile">
+  <div className="profile--body">
     <img src={PhotoUrl} alt="profile image"/>
-    Name: {Name}
-    email:{Email}
-    unique Id : {Uid}
-    Email verified? : {EmailVerified}
-    <button onClick = {startLogout}>Log Out</button>
+    <h3>Name: {Name}</h3>
+    <h4>Email address: {Email}</h4>
+    <h4>UId: {Uid}</h4>
+    <button 
+    className=" profile-button login-body__button"
+    onClick = {startLogout}>Log Out</button>
+    </div>
   </div>
  )};
 

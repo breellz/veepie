@@ -1,0 +1,43 @@
+.login {
+    background-image: url('/images/desktop.jpg');
+    background-size: cover;
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.login-body{
+    margin: 0 auto;
+    background:fade-out($color: $off-white, $amount: .40);
+    align-items: center;
+    padding:$l-size;
+    display:flex;
+    width: 45%;
+    flex-direction: column;
+    border-radius: $m-size;
+    @media(min-width: $desktop-breakpoint){
+        min-width: 20%;
+        max-width:20%;
+
+    }
+    h2 {
+        padding:$s-size;
+        font-style: cursive;
+         text-transform: capitalize;
+        font-size: 3rem;
+        font-family: 'Righteous',cursive;
+        color:$blue;
+    }
+    p{
+        padding: $s-size;
+        font-weight: 500;
+        font-size: $m-size;
+    }
+}
+.login-body__button {
+    padding:$s-size;
+    border-radius: $s-size;
+
+}

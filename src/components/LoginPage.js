@@ -5,8 +5,14 @@ import { startGoogleLogin} from '../actions/auth'
 
 
 const LoginPage = ({startGoogleLogin}) => (
-  <div>
-    <button onClick = { startGoogleLogin }>Login with Google</button>
+  <div className= "login">
+    <div className="login-body">
+      <h2>Veepie</h2>
+        <p>Tell a story...</p>
+      <button className="login-body__button"
+      onClick = { startGoogleLogin
+      }>Login with Google</button>
+    </div>
   </div>
 );
 

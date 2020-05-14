@@ -4,6 +4,9 @@
     font-family: 'Georgia', serif;
     font-size: 14px;
     padding: 15px;
+    width: 90%;
+    border:1px $dark-blue solid;
+    border-radius: $s-size;
   }
   
   .RichEditor-editor {
@@ -11,6 +14,8 @@
     cursor: text;
     font-size: 16px;
     margin-top: 10px;
+  
+    
   }
   
   .RichEditor-editor .public-DraftEditorPlaceholder-root,

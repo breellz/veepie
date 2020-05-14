@@ -1,0 +1,48 @@
+.profile {
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.profile--body{
+    margin: 0 auto;
+    display:flex;
+    width: 40rem;
+    flex-direction: column;
+    padding: $l-size;
+    height: auto;
+    box-shadow: 0 4px 8px 0 #1a1d24;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    background-color:$off-white;
+}
+
+.profile--body h3, h4 {
+    word-wrap: break-word;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Righteous',cursive;
+    font-size: 1.5rem;
+    font-weight:bold ;
+}
+
+.profile--body:hover{
+    box-shadow: 0 8px 16px  #1a1d24;
+}
+
+.profile--body img {
+    border-radius: 50%;
+    height:18rem;
+    width:18rem;
+}
+
+
+.profile-button{
+    background: $dark-blue;
+    color:$off-white;
+}

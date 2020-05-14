@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 
 export const Nav = () => (
-  <header>
-
-  <NavLink to="/dashboard" activeClassName= "is-active" exact ={true}>Dashboard</NavLink>
-  <NavLink to ="/create" activeClassName ="is-active">Add Post</NavLink>
-  <NavLink to ="/profile" activeClassName ="is-active">Profile</NavLink>
+  <header className="nav">
+  <div className="content-container nav-link">
+  <NavLink className="nav-link__item" to="/dashboard" activeClassName= "is-active"><h1>Dashboard</h1></NavLink>
+  <NavLink className="nav-link__item" to ="/create" activeClassName ="is-active"><h3>Add Post</h3></NavLink><br />
+  <NavLink className="nav-link__item" to ="/profile" activeClassName ="is-active"><h3>Profile</h3></NavLink>
+  </div>
   </header>
 );
 

@@ -8,19 +8,19 @@ import RichEditor from './RichEditor'
 const EditPost = (props) => {
  const onRemove=()=>{
    props.startDeletePost(props.post.id)
-   props.history.push('/')
+   props.history.push('/dashboard')
  }
  const onSubmit = ({tags, ...rest})=> {
   const editedTags = tags.split(',')
   const updates = {...rest, tags: editedTags}
    props.startEditpost(props.post.id, updates)
-  props.history.push('/')
+  props.history.push('/dashboard')
 }
   return(
-  <div>
+  <div className="content-container add-post">>
     <RichEditor post = {props.post}
     onSubmit ={(post)=>onSubmit(post)}/>
-    <button onClick={onRemove}>Delete Post</button>
+    <button className=" edit-post-button post-form__button" onClick={onRemove}>Delete Post</button>
   </div>
  )
 };

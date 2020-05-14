@@ -1,0 +1,31 @@
+.nav {
+    background: $dark-blue;
+    color: white;
+    width:100vw;
+    padding-bottom: $s-size;
+    
+    
+}
+.nav-link{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+}
+.nav-link__item{
+    text-decoration: none;
+    color:white;
+    margin-right: $s-size;
+   h1{
+ margin: 0;
+   }
+   h3{
+       margin-top: 1.3rem;
+   }  
+}
+
+.is-active{
+    border-bottom: 3px $off-white solid;
+    
+}

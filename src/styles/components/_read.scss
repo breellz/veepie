@@ -1,0 +1,23 @@
+.read {
+    color: $off-white;
+}
+
+.read-header {
+    background: $dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:$off-white;
+    margin: 0 auto;
+}
+
+.read-body {
+ font-size: 1.8rem;
+ height: 500px;
+}
+
+.read-header-link {
+    color: white;
+    text-decoration: none;
+}

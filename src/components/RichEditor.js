@@ -15,16 +15,16 @@ class RichEditor extends React.Component {
 		this.state = {
 		editorState: this.props.post? EditorState.createWithContent(stateFromHTML(this.props.post.body)) : EditorState.createEmpty(),
 		tags:  this.props.post? this.props.post.tags.toString() : '',
-		title: this.props.post ? this.props.post.title : ''
+		title: this.props.post ? this.props.post.title : '',
+		error:''
 	};
 		 
 		this.focus = () => this.refs.editor.focus();
 	}
 	onChange = (editorState) => {
 		this.setState({editorState});
-		const contentState = editorState.getCurrentContent()
-		let html = convertToRaw(contentState)
-		console.log(html)
+		
+
 	}
 
 	toggleBlockType = (blockType) => {
@@ -51,12 +51,16 @@ class RichEditor extends React.Component {
 		const title = e.target.value
 		this.setState(()=>({title}))
 	} 
-		handleClick = () => {
-			const createdAt= moment().format('dddd, MMMM Do YYYY, h:mm a')
-			const tags = this.state.tags
-			const body = stateToHTML(this.state.editorState.getCurrentContent())
-			const title = this.state.title
-			const comments = []
+	handleClick = () => {
+		const createdAt= moment().valueOf()
+		const tags = this.state.tags
+		const body = stateToHTML(this.state.editorState.getCurrentContent())
+		const title = this.state.title
+		const comments = []
+		if (!tags || !body ||!title) {
+			this.setState(()=>({error: 'All fields are required'}))
+		} else{
+			this.setState(()=>({error:''}))
 			this.props.onSubmit({
 				title,
 				createdAt,
@@ -65,6 +69,8 @@ class RichEditor extends React.Component {
 				tags
 			})
 		}
+		
+	}
 
 	render() {
 		const {editorState} = this.state;
@@ -81,15 +87,15 @@ class RichEditor extends React.Component {
 		}
 
 		return (
-			<div>
-			<div>
+			<div className="post-form">
+			<p>{this.state.error}</p>
 			<input 
+			className="post-form__input"
             type="text" 
             placeholder="title"
             value={this.state.title} 
             onChange={this.handleTitle}
             />
-			</div>
 			<div className="RichEditor-root">
 				<BlockStyleControls
 					editorState={editorState}
@@ -113,12 +119,15 @@ class RichEditor extends React.Component {
 				</div>
 			</div>
 			<input 
+			className="post-form__input"
             type="text" 
             placeholder="comma separated tags..."
             value={this.state.tags} 
             onChange={this.handleTags}
             />
-			<button onClick={this.handleClick}>Add Post</button>
+			<button 
+			className="post-form__button"
+			onClick={this.handleClick}>Add Post</button>
 			</div>
 		);
 	}

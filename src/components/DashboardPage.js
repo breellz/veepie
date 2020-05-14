@@ -5,7 +5,7 @@ import PostlistFilters from './PostlistFilter';
 
 
 const DashboardPage = (props) => (
-  <div>
+  <div className="content-container">
     <PostlistFilters />
     <PostList />
   </div>

@@ -4,13 +4,12 @@ import ReactDOM from 'react-dom';
 import AppRouter, { history }  from './routers/AppRouter';
  import configureStore from './store/configureStore';
  import { startSetPosts } from './actions/posts'
- import uuid from 'uuid';
  import { login, logout } from './actions/auth';
 // import 'normalize.css/normalize.css';
  import './styles/styles.scss';
-// import 'react-dates/lib/css/_datepicker.css';
  import { firebase } from './firebase/firebase';
  import LoadingPage from './components/LoadingPage';
+
 
 
 
@@ -30,6 +29,7 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
+
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 

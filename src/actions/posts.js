@@ -9,8 +9,10 @@ export const addPost = (post) => ({
 })
 
 export const startAddPost = (postData = {})=>{
-  return (dispatch) => {
-    database.ref('post').push(postData).then((ref)=>{
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid
+
+    database.ref(`users/${uid}/posts`).push(postData).then((ref)=>{
       dispatch(addPost({
         id: ref.key,
         ...postData
@@ -27,8 +29,9 @@ export const deletePost = (id) => ({
 })
 
 export const startDeletePost = (id) => {
-  return (dispatch) => {
-   return database.ref(`post/${id}`).remove().then(()=>{
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid
+   return database.ref(`users/${uid}/posts/${id}`).remove().then(()=>{
       dispatch(deletePost(id))
     })
   }
@@ -42,8 +45,10 @@ export const editPost = (id, updates) => ({
 }) 
 
 export const startEditPost= (id, updates) => {
-  return (dispatch) => {
-    database.ref(`post/${id}`).update(updates).then(()=>{
+  return (dispatch, getState) => {
+     const uid = getState().auth.uid
+
+    database.ref(`users/${uid}/posts/${id}`).update(updates).then(()=>{
       dispatch(editPost(id, updates))
     })
   }
@@ -57,8 +62,10 @@ export const setPosts = (posts) =>({
 })
 
 export const startSetPosts = () => {
-  return (dispatch)=> {
-   return database.ref('post').once('value').then((snapshot)=>{
+  return (dispatch, getState)=> {
+    const uid = getState().auth.uid
+
+   return database.ref(`users/${uid}/posts`).once('value').then((snapshot)=>{
       const posts = []
 
       snapshot.forEach((childSnapshot)=>{

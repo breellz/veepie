@@ -6,8 +6,10 @@ import {setTextFilter } from '../actions/filters'
 
 const PostlistFilter = (props) => {
     return (
-        <div>
-            <input value={props.filters.text} onChange={(e)=>
+        <div >
+            <input
+            className="post-form__input postlist-search"
+            value={props.filters.text} onChange={(e)=>
                 props.dispatch(setTextFilter(e.target.value))} placeholder="Search Post" />
         </div>
     )
