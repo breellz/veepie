@@ -12,10 +12,10 @@ const Read = (props) => {
      <Link className="read-header-link" to="/"><h1>Veepie</h1></Link>
       <h3>Tell a story</h3>
     </div >
-    <div className="content-container ">
+    <div className=" read-combined content-container ">
      <h1 className="read-title">{props.post.title}</h1>
      <p>By: {props.post.author} on {moment(props.post.createdAt).format('dddd, MMMM Do YYYY, h:mm a')}</p><br /> 
-   <div className="read-body" 
+   <div className="read-body"
    dangerouslySetInnerHTML={{__html:body}}>
    </div>
     <br/><br />

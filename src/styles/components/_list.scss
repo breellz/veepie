@@ -3,7 +3,7 @@
   color: $off-white;
   padding: $s-size $m-size;
   margin-bottom: $m-size;
-  margin-left: 4rem;
+  
   transition: background .3s ease;
   background: fade-out($color: $dark-blue, $amount: .5);
   @media (min-width: $desktop-breakpoint) {
