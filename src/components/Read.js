@@ -14,7 +14,7 @@ const Read = (props) => {
     </div >
     <div className=" read-combined content-container ">
      <h1 className="read-title">{props.post.title}</h1>
-     <p>By: {props.post.author} on {moment(props.post.createdAt).format('dddd, MMMM Do YYYY, h:mm a')}</p><br /> 
+     <p className="author">By: {props.post.author} on {moment(props.post.createdAt).format('dddd, MMMM Do YYYY, h:mm a')}</p><br /> 
    <div className="read-body"
    dangerouslySetInnerHTML={{__html:body}}>
    </div>

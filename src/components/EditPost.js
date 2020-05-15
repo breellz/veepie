@@ -17,11 +17,15 @@ const EditPost = (props) => {
   props.history.push('/dashboard')
 }
   return(
+    <div>
   <div className="content-container add-post">>
     <RichEditor post = {props.post}
     onSubmit ={(post)=>onSubmit(post)}/>
-    <button className=" edit-post-button post-form__button" onClick={onRemove}>Delete Post</button>
   </div>
+  <div className="button-div">
+  <button className="edit-post-button" onClick={onRemove}>Delete Post</button>
+ </div>
+ </div>
  )
 };
 

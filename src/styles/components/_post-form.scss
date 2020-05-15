@@ -21,9 +21,21 @@
     width: 80%;
     background-color: $dark-blue;
     color:white;
-    font-size:600;
-}
-.edit-post-button{
-    margin: 1rem auto;
 }
 
+.button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-post-button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding:$s-size;
+    border-radius: $s-size;
+    width: 60%;
+    background-color: $dark-blue;
+    color:white;
+}
