@@ -1,30 +1,32 @@
-Manage your expenses easily
+A blogging platform that features user accounts and posts shareable links
 
-interested in contributing?
+app available at https://veepie.herokuapp.cpm
 
-fork the repo
-clone
 
-install dependencies 
-"npm install"
 
-run dev server
 
-"npm run dev-server"
 
-Run development build
 
-"npm run build:dev"
 
-Run production build
 
-"npm run build:prod"
 
-Run production server
 
-"node server/server.js"
 
-Test components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 "npm test"
 
