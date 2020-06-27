@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render navbar correctly 1`] = `
+<header
+  className="nav"
+>
+  <div
+    className="content-container nav-link"
+  >
+    <NavLink
+      activeClassName="is-active"
+      ariaCurrent="true"
+      className="nav-link__item"
+      to="/dashboard"
+    >
+      <h3>
+        Dashboard
+      </h3>
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      ariaCurrent="true"
+      className="nav-link__item"
+      to="/create"
+    >
+      <h3>
+        Add Post
+      </h3>
+    </NavLink>
+    <br />
+    <NavLink
+      activeClassName="is-active"
+      ariaCurrent="true"
+      className="nav-link__item"
+      to="/profile"
+    >
+      <h3>
+        Profile
+      </h3>
+    </NavLink>
+  </div>
+</header>
+`;

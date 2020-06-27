@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render loginpage correctly 1`] = `
+<div
+  className="login"
+>
+  <div
+    className="login-body"
+  >
+    <h2>
+      Veepie
+    </h2>
+    <p>
+      Tell a story...
+    </p>
+    <button
+      className="login-body__button"
+    >
+      Login with Google
+    </button>
+  </div>
+</div>
+`;

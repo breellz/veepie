@@ -4,7 +4,7 @@ import { startGoogleLogin} from '../actions/auth'
 
 
 
-const LoginPage = ({startGoogleLogin}) => (
+export const LoginPage = ({startGoogleLogin}) => (
   <div className= "login">
     <div className="login-body">
       <h2>Veepie</h2>

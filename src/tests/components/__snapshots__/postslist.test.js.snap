@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render postlist with empty message 1`] = `
+<div>
+  <p>
+    No posts to show
+  </p>
+</div>
+`;
+
+exports[`should render postslist with posts 1`] = `
+<div>
+  <PostlistItem
+    body="hola moi"
+    comments={Array []}
+    createdAt={1}
+    id="whe12"
+    key="whe12"
+    tags={Array []}
+    title="first post"
+  />
+  <PostlistItem
+    body="oi"
+    comments={Array []}
+    createdAt={-1}
+    id="whse12"
+    key="whse12"
+    tags={Array []}
+    title="second post"
+  />
+  <PostlistItem
+    body=" moi"
+    comments={Array []}
+    createdAt={0}
+    id="whes2"
+    key="whes2"
+    tags={Array []}
+    title="third post"
+  />
+</div>
+`;

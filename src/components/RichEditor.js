@@ -16,11 +16,11 @@ class RichEditor extends React.Component {
 		editorState: this.props.post? EditorState.createWithContent(stateFromHTML(this.props.post.body)) : EditorState.createEmpty(),
 		tags:  this.props.post? this.props.post.tags.toString() : '',
 		title: this.props.post ? this.props.post.title : '',
-		error:''
 	};
 		 
 		this.focus = () => this.refs.editor.focus();
-	}
+}
+
 	onChange = (editorState) => {
 		this.setState({editorState});
 		
@@ -57,6 +57,7 @@ class RichEditor extends React.Component {
 		const body = stateToHTML(this.state.editorState.getCurrentContent())
 		const title = this.state.title
 		const comments = []
+		const uid = this.state.uid
 		if (!tags || !body ||!title) {
 			this.setState(()=>({error: 'All fields are required'}))
 		} else{
@@ -66,6 +67,7 @@ class RichEditor extends React.Component {
 				createdAt,
 				body,
 				comments,
+				uid,
 				tags
 			})
 		}

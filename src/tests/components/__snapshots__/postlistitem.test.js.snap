@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render post list item with posts 1`] = `
+<div
+  className="list-body"
+  key="whe12"
+>
+  <h2
+    className="list-title"
+  >
+    first post
+  </h2>
+  <p>
+    Created: 
+    Thursday, January 1st 1970, 1:00 am
+  </p>
+  <p>
+    Tags: 
+  </p>
+  <div
+    className="link-group"
+  >
+    <Link
+      className="tag-links"
+      replace={false}
+      to="/edit/whe12"
+    >
+      Edit Post
+    </Link>
+    <Link
+      className="tag-links"
+      replace={false}
+      to="/read/whe12"
+    >
+      View Post
+    </Link>
+  </div>
+</div>
+`;

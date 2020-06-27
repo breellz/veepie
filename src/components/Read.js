@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import moment from 'moment'
+import moment from 'moment';
+import  database from '../firebase/firebase'
 import { Link } from 'react-router-dom';
 
 
+
 const Read = (props) => {
+
+  // const [posts, setPosts] = useState([])
+
+  // database.ref('users').on("value", (snapshot)=>{
+  //   snapshot.forEach(childSnapshot=>{
+  //     const post = []
+  //     post.push(
+  //     childSnapshot.val()
+  //     )
+  //     setPosts([
+  //       post
+  //     ])
+  //   })
+    
+  // })
+
+  console.log(posts)
   const body = props.post.body
   return(
   <div className="read">

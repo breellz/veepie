@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment'
 
-const PostlistItem = ({ id, createdAt, title, tags }) => (
+  const PostlistItem = ({ id, createdAt, title, tags }) => (
   <div key={id} className="list-body">
   <h2 className="list-title">{title}</h2>
   <p>Created: {moment(createdAt).format('dddd, MMMM Do YYYY, h:mm a')}</p>

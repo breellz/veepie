@@ -4,7 +4,7 @@ import PostsSelector from '../selectors/PostsSelector'
 import PostlistItem from './PostlistItem'
 
 
-const PostList = (props) => (
+export const PostList = (props) => (
   <div>
   {
     props.posts.length === 0 ? (<p>No posts to show</p>) :

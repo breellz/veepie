@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render comments correctly 1`] = `
+<div>
+  <form>
+    <textarea
+      placeholder="your comment goes here"
+    />
+    <button>
+      Post Comment
+    </button>
+  </form>
+</div>
+`;
