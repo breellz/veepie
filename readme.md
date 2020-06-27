@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <p align="center">
@@ -45,8 +46,6 @@ Veepie is a blogging platform I built with react and redux. Users can write post
   * firebase authentication
 * [Jest](https://jestjs.io)
   * React testing with jest
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
